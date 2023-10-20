@@ -1,5 +1,6 @@
 import net from 'node:net'
 import fs from 'node:fs'
+import dotenv from './dotenv.js'
 
 export const ping = (ip, cb) => {
    const startTime = process.hrtime()
@@ -74,3 +75,9 @@ export async function delay(t) {
 }
 
 delay(3000).then(() => console.log('Hola mundo'));
+
+
+dotenv.config();
+
+console.log('process.env.PORT:', process.env.PORT);
+console.log('process.env.DB_HOST:', process.env.DB_HOST);
