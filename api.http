@@ -1,0 +1,24 @@
+### Recuperar todos los items
+GET http://localhost:8080/items
+
+### Recuperar un item
+GET http://localhost:8080/items/5
+
+### Crear un item
+POST http://localhost:8080/items
+Content-Type: application/json
+
+{
+   "content": "Item 7"
+}
+
+### Modificar un item
+PUT http://localhost:8080/items/5
+Content-Type: application/json
+
+{
+   "content": "Item 4 modified"
+}
+
+### Eliminar un Item
+DELETE http://localhost:8080/items/5
